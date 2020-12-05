@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\compile_to_ppc\target\powerpc-unknown-linux-gnu\release\build\typenum-f506bd841ba1a638\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\compile_to_ppc\target\powerpc-unknown-linux-gnu\release\build\typenum-f506bd841ba1a638\out\op.rs

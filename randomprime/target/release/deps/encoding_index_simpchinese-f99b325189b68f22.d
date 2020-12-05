@@ -1,0 +1,9 @@
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\encoding_index_simpchinese-f99b325189b68f22.rmeta: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030_ranges.rs
+
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\libencoding_index_simpchinese-f99b325189b68f22.rlib: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030_ranges.rs
+
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\encoding_index_simpchinese-f99b325189b68f22.d: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030_ranges.rs
+
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\lib.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\encoding-index-simpchinese-1.20141219.5\gb18030_ranges.rs:

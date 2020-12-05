@@ -1,0 +1,11 @@
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\libc-c8049986dba6ec38.rmeta: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\macros.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\fixed_width_ints.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\mod.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\msvc.rs
+
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\liblibc-c8049986dba6ec38.rlib: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\macros.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\fixed_width_ints.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\mod.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\msvc.rs
+
+C:\Users\devta\Documents\GitHub\metroid-prime-randomizer-customfork\randomprime\target\release\deps\libc-c8049986dba6ec38.d: C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\lib.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\macros.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\fixed_width_ints.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\mod.rs C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\msvc.rs
+
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\lib.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\macros.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\fixed_width_ints.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\mod.rs:
+C:\Users\devta\.cargo\registry\src\github.com-1ecc6299db9ec823\libc-0.2.67\src\windows\msvc.rs:

@@ -1,0 +1,15 @@
+[package]
+name = "macro_file_proxy_proc_macro"
+version = "0.1.0"
+authors = ["April Wade <wayedt@gmail.com>"]
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1"
+quote = "1"
+proc-macro-hack = "0.5"
+proc-macro2 = "1"
+
