@@ -350,6 +350,11 @@ export const details: SettingsDetails = {
     description: `The morph ball path can be climbed with Space Jump instead to reach the item.`,
     difficulty: Difficulty.TRIVIAL
   },
+  fieryShoresItemMin: {
+    name: 'Fiery Shores Item with Only Varia Suit',
+    description: `The morph ball path can be climbed NSJ instead to reach the item.`,
+    difficulty: Difficulty.HARD
+  },
   frigateCrashSiteItemOnlyScanVisor: {
     name: 'Frigate Crash Site Item with only Scan Visor',
     description: `You can scan dash from either side of the lake to reach the item ledge without any additional items.`,

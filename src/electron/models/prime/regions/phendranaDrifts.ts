@@ -230,7 +230,7 @@ export function phendranaDrifts(): RegionObject[] {
           }
 
 
-          return (settings.tricks.controlTowerEscapeSJ || items.canLayBombs()) && baseReqs;
+          return (settings.tricks.controlTowerEscapeSJ && items.has(PrimeItem.MORPH_BALL) || items.canLayBombs()) && baseReqs;
         },
         'Observatory': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const baseReqs = items.hasMissiles() && items.has(PrimeItem.WAVE_BEAM);
