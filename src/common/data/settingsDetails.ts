@@ -390,6 +390,11 @@ export const details: SettingsDetails = {
     description: `You can go through Crashed Frigate without gravity with Ice Beam, Wave Beam, and Boost. (Note that this trick also expects SJ)`,
     difficulty: Difficulty.HARD
   },
+  gravitylessFrigateNsj: {
+    name: 'Crashed Frigate without Gravity or Space Jump',
+    description: `You can go through Crashed Frigate without gravity with Ice Beam, Wave Beam, and Boost.`,
+    difficulty: Difficulty.HARD
+  },
   greatTreeHallBarsSkip: {
     name: 'Great Tree Hall - Bars Skip',
     description: 'You can double bomb jump over the bars from either side (the logic also expects this) in Great Tree Hall.',
@@ -544,7 +549,7 @@ export const details: SettingsDetails = {
   },
   removeGravityReqs: {
     name: 'Remove Gravity Requirements',
-    description: `You will not be required to have Gravity Suit for any underwater checks or accessing areas from water. (Note: this does not include tower chamber if you dont have SJ)`,
+    description: `You will not be required to have Gravity Suit for any underwater checks or accessing areas from water.`,
     difficulty: Difficulty.HARD
   },
   removePhendranaDepthsGrappleReqs: {

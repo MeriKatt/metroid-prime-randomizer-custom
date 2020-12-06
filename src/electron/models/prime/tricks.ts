@@ -102,6 +102,7 @@ export class Tricks extends SettingsFlags {
   frigateCrashSiteItemOnlyScanVisor = false;
   frigateCrashSiteItemWithoutGravitySuit = false;
   gravitylessFrigate = false;
+  gravitylessFrigateNsj = false;
   hydroAccessTunnelWithoutGravity = false;
   towerChamberNoGravity = false;
   wateryHallUnderwaterSlopeJump = false;

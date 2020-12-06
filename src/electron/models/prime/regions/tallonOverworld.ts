@@ -63,8 +63,11 @@ export function tallonOverworld(): RegionObject[] {
         'Cargo Freight Lift to Deck Gamma': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const thermalReqs = settings.tricks.removeThermalReqs || items.has(PrimeItem.THERMAL_VISOR);
           const gravityReqs = settings.tricks.removeGravityReqs || settings.tricks.gravitylessFrigate || settings.tricks.crashedFrigateGammaElevatorWithoutGravity || items.has(PrimeItem.GRAVITY_SUIT);
-          return items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.ICE_BEAM) && thermalReqs
-            && gravityReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const SJReqs = items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.ICE_BEAM) && thermalReqs
+          && gravityReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const NSJReqs = items.canBoost() && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.ICE_BEAM) && thermalReqs
+          && (settings.tricks.gravitylessFrigateNsj);
+          return NSJReqs || SJReqs;
         },
         // Only an exit if climb frigate crash site is true
         'Overgrown Cavern': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
@@ -139,11 +142,17 @@ export function tallonOverworld(): RegionObject[] {
         'Hydro Access Tunnel': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const thermalReqs = settings.tricks.removeThermalReqs || items.has(PrimeItem.THERMAL_VISOR);
           const gravityReqs = settings.tricks.gravitylessFrigate || items.has(PrimeItem.GRAVITY_SUIT) || (settings.tricks.removeGravityReqs || settings.tricks.hydroAccessTunnelWithoutGravity);
-
-          return thermalReqs && gravityReqs && items.has(PrimeItem.WAVE_BEAM)
-            && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const SJReqs = thermalReqs && gravityReqs && items.has(PrimeItem.WAVE_BEAM)
+          && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const NSJReqs = thermalReqs && settings.tricks.gravitylessFrigateNsj && items.has(PrimeItem.WAVE_BEAM)
+          && items.canBoost();
+          return NSJReqs || SJReqs;
         },
-        'Cargo Freight Lift to Deck Gamma': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => (settings.tricks.gravitylessFrigate || settings.tricks.removeGravityReqs || items.has(PrimeItem.GRAVITY_SUIT)) && items.has(PrimeItem.SPACE_JUMP_BOOTS)
+        'Cargo Freight Lift to Deck Gamma': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
+          const SJReqs =  (settings.tricks.gravitylessFrigate || settings.tricks.removeGravityReqs || items.has(PrimeItem.GRAVITY_SUIT)) && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const NSJReqs = settings.tricks.gravitylessFrigateNsj && items.canBoost();
+          return NSJReqs || SJReqs;
+        }
       }
     },
     {
@@ -151,21 +160,22 @@ export function tallonOverworld(): RegionObject[] {
       locations: {
         [PrimeLocation.HYDRO_ACCESS_TUNNEL]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           return (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
-            || ((settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost());
+            || ((settings.tricks.gravitylessFrigateNsj ||settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost());
         }
       },
       exits: {
         'Great Tree Hall (Lower)': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const gravityReqs = (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
-            || ((settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity) && items.canBoost());
+            || ((settings.tricks.gravitylessFrigateNsj || settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity) && items.canBoost());
 
           return gravityReqs && items.has(PrimeItem.ICE_BEAM);
         },
         'Biohazard Containment': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const gravityReqs = (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
             || ((settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost());
-
-          return gravityReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const SJReqs = gravityReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const NSJReqs = settings.tricks.gravitylessFrigateNsj && items.canBoost();
+          return NSJReqs || SJReqs;
         }
       }
     },
@@ -194,7 +204,10 @@ export function tallonOverworld(): RegionObject[] {
       name: 'Great Tree Hall (Lower)',
       exits: {
         'Hydro Access Tunnel': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
-          const gravityReqs = items.has(PrimeItem.GRAVITY_SUIT) || (((settings.tricks.removeGravityReqs || settings.tricks.gravitylessFrigate) && items.has(PrimeItem.SPACE_JUMP_BOOTS)) || settings.tricks.hydroAccessTunnelWithoutGravity);
+          const gravityReqs = items.has(PrimeItem.GRAVITY_SUIT) && items.canLayBombs()
+           || (((settings.tricks.removeGravityReqs || settings.tricks.gravitylessFrigate) && items.has(PrimeItem.SPACE_JUMP_BOOTS))
+            || (settings.tricks.gravitylessFrigateNsj && items.canBoost()
+             || settings.tricks.hydroAccessTunnelWithoutGravity && items.canBoost()));
           const baseReqs = gravityReqs && items.has(PrimeItem.ICE_BEAM);
 
           if (settings.pointOfNoReturnItems === PointOfNoReturnItems.ALLOW_ALL) {

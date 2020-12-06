@@ -173,8 +173,9 @@ export function chozoRuins(): RegionObject[] {
         [PrimeLocation.TOWER_CHAMBER]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const gravityReqs = items.has(PrimeItem.GRAVITY_SUIT) || (settings.tricks.removeGravityReqs || settings.tricks.towerChamberNoGravity);
           const sjReqs = gravityReqs && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const nsjReqs = settings.tricks.removeGravityReqs && items.has(PrimeItem.WAVE_BEAM);
           return (items.has(PrimeItem.GRAVITY_SUIT) && items.canLayBombs() && settings.tricks.towerChamberNsj)
-           || sjReqs;
+           || nsjReqs || sjReqs;
         }
       },
       exits: {
