@@ -18,12 +18,7 @@ export function tallonOverworld(): RegionObject[] {
       exits: {
         'Alcove': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const normalReqs = items.canBoost() && items.canLayBombs();
-
-          if (settings.pointOfNoReturnItems !== PointOfNoReturnItems.DO_NOT_ALLOW) {
-            return settings.tricks.alcoveNoItems || normalReqs || items.has(PrimeItem.SPACE_JUMP_BOOTS);
-          }
-
-          return items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          return normalReqs || settings.tricks.alcoveNoItems && items.has(PrimeItem.SCAN_VISOR) || settings.tricks.alcoveNoItemsPAL  || normalReqs || items.has(PrimeItem.SPACE_JUMP_BOOTS);
         },
         'Tallon Canyon': () => true,
         'Artifact Temple': (items: PrimeItemCollection) => items.hasMissiles(),
@@ -36,7 +31,7 @@ export function tallonOverworld(): RegionObject[] {
         [PrimeLocation.ALCOVE]: () => true
       },
       exits: {
-        'Landing Site': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => settings.tricks.alcoveNoItems || items.has(PrimeItem.SPACE_JUMP_BOOTS) || items.has(PrimeItem.MORPH_BALL) && items.canLayBombs()
+        'Landing Site': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => settings.tricks.alcoveNoItems || settings.tricks.alcoveNoItemsPAL || items.has(PrimeItem.SPACE_JUMP_BOOTS) || items.has(PrimeItem.MORPH_BALL) && items.canLayBombs()
       }
     },
     {

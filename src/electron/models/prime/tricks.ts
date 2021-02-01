@@ -4,6 +4,7 @@ import { getPaddedBitStringFromSettingsString } from '../../utilities';
 export class Tricks extends SettingsFlags {
   // Tallon
   alcoveNoItems = false;
+  alcoveNoItemsPAL = false;
   arborChamberWithoutPlasma = false;
   climbFrigateCrashSite = false;
   greatTreeHallBarsSkip = false;
@@ -31,11 +32,15 @@ export class Tricks extends SettingsFlags {
   mainPlazaHpbj = false;
   mainPlazaItemsOnlySpaceJump = false;
   mainPlazaTreeNoSpaceJump = false;
+  mainPlazaHalfPipeNoItems = false;
   reflectingPoolAccessWithoutWaveBeam = false;
   ruinedFountainItemFlaahgraSkip = false;
   ruinedFountainItemFlaahgraSkipNsj = false;
   ruinedNurseryWithoutBombs = false;
+  ruinedNurseryWithoutBombsNsj = false;
   ruinedShrineScanDashEscape = false;
+  ruinedShrineEscapeNoScan = false;
+  ruinedShrineUpperMinItems = false;
   sunTowerIbj = false;
   towerOfLightNsj = false;
   towerChamberNsj = false;

@@ -14,7 +14,7 @@ export function chozoRuins(): RegionObject[] {
       name: 'Main Plaza',
       locations: {
         [PrimeLocation.MAIN_PLAZA_HALF_PIPE]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
-          const boostReqs = items.canBoost() || (settings.tricks.mainPlazaHpbj && items.canLayBombs());
+          const boostReqs = items.canBoost() || (settings.tricks.mainPlazaHpbj && items.canLayBombs()) || settings.tricks.mainPlazaHalfPipeNoItems && items.has(PrimeItem.MORPH_BALL);
           const sjReqs = settings.tricks.mainPlazaItemsOnlySpaceJump && items.has(PrimeItem.SPACE_JUMP_BOOTS);
 
           return boostReqs || sjReqs;
@@ -67,7 +67,7 @@ export function chozoRuins(): RegionObject[] {
       name: 'Ruined Nursery',
       locations: {
         [PrimeLocation.RUINED_NURSERY]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
-          return items.canLayBombs() || (settings.tricks.ruinedNurseryWithoutBombs && items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.SPACE_JUMP_BOOTS));
+          return items.canLayBombs() || (settings.tricks.ruinedNurseryWithoutBombs && items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.SPACE_JUMP_BOOTS)) || settings.tricks.ruinedNurseryWithoutBombsNsj && items.has(PrimeItem.MORPH_BALL);
         }
       },
       exits: {
@@ -127,7 +127,8 @@ export function chozoRuins(): RegionObject[] {
       locations: {
         [PrimeLocation.RUINED_SHRINE_HALF_PIPE]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const spaceJumpReqs = settings.tricks.upperRuinedShrineTowerOfLightFewerAccessReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS) && items.has(PrimeItem.MORPH_BALL);
-          return spaceJumpReqs || items.canBoost();
+          const MinReqs = settings.tricks.ruinedShrineUpperMinItems && items.has(PrimeItem.MORPH_BALL);
+          return spaceJumpReqs || MinReqs || items.canBoost();
         }
       },
       exits: {
@@ -140,7 +141,7 @@ export function chozoRuins(): RegionObject[] {
         },
         'Tower of Light': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const boostSpiderReqs = (items.canBoost() && items.canSpider())
-            || (settings.tricks.upperRuinedShrineTowerOfLightFewerAccessReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS));
+            || (settings.tricks.upperRuinedShrineTowerOfLightFewerAccessReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS) || settings.tricks.ruinedShrineUpperMinItems);
           return boostSpiderReqs && items.has(PrimeItem.WAVE_BEAM);
         },
         'Main Plaza': (items: PrimeItemCollection) => items.hasMissiles()
@@ -157,7 +158,7 @@ export function chozoRuins(): RegionObject[] {
       },
       exits: {
         'Ruined Shrine (Outer)': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
-          const scanReqs = settings.tricks.ruinedShrineScanDashEscape && items.has(PrimeItem.SCAN_VISOR);
+          const scanReqs = settings.tricks.ruinedShrineScanDashEscape && items.has(PrimeItem.SCAN_VISOR) || settings.tricks.ruinedShrineEscapeNoScan;
           const normalReqs = items.has(PrimeItem.MORPH_BALL) || items.has(PrimeItem.SPACE_JUMP_BOOTS);
 
           return scanReqs || normalReqs;

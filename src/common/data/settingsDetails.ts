@@ -159,7 +159,14 @@ export const details: SettingsDetails = {
     name: 'Alcove with No Items',
     description: `It's possible to reach the Alcove room without any items by performing a dash from Samus's ship to the upper ledge, near the Gully door.
 
-    This can be done with a scan dash off the Red Starburst above the Temple Hall door, or by locking onto a Seedling in Temple Hall and then dashing.`,
+    This can be done with a scan dash off the Red Starburst above the Temple Hall door.`,
+    difficulty: Difficulty.EASY
+  },
+  alcoveNoItemsPAL: {
+    name: 'Alcove with No Items PAL version',
+    description: `It's possible to reach the Alcove room without any items by performing a dash from Samus's ship to the upper ledge, near the Gully door.
+
+    This can be done by locking onto a Seedling in Temple Hall and then dashing.`,
     difficulty: Difficulty.EASY
   },
   antechamberWithPowerBombs: {
@@ -500,6 +507,11 @@ export const details: SettingsDetails = {
     description: `You can jump or fall down from the Ruined Fountain door ledge to reach the tree item.`,
     difficulty: Difficulty.TRIVIAL
   },
+  mainPlazaHalfPipeNoItems: {
+    name: 'Main Plaza Half Pipe Item only morph ball',
+    description: `From the upper level you can manuever the morph ball in such a way as to have enough momentum to get the item.`,
+    difficulty: Difficulty.TRIVIAL
+  },
   mainQuarryItemWithoutSpider: {
     name: 'Main Quarry Item without Spider Ball',
     description: `You can slope jump onto the top of the crane and R jump over to the item.`,
@@ -598,11 +610,29 @@ export const details: SettingsDetails = {
     Boost Ball can also be used, but is part of the Boost through Bomb Tunnels trick option instead of this option.`,
     difficulty: Difficulty.HARD
   },
+  ruinedNurseryWithoutBombsNsj: {
+    name: 'Ruined Nursery without Bombs or Space Jump',
+    description: `You can Jump on several parts of standable terrain to get where you would with SJ and morph near the item, and enter the tunnel to obtain it without bombs.
+
+    Boost Ball can also be used, but is part of the Boost through Bomb Tunnels trick option instead of this option.`,
+    difficulty: Difficulty.HARD
+  },
   ruinedShrineScanDashEscape: {
     name: 'Ruined Shrine Scan Dash Escape',
     description: `To leave Ruined Shrine with just Scan Visor, there is some narrow collision on the branches opposite the sandstone tunnel that you can jump on.
 
     Once on the branches, face the opposing wall and scan dash using the sandstone tunnel or the wall decoration.`,
+    difficulty: Difficulty.EASY
+  },ruinedShrineEscapeNoScan: {
+    name: 'Ruined Shrine Escape without scan',
+    description: `To leave Ruined Shrine with out even Scan Visor, there is some narrow collision on the branches opposite the sandstone tunnel that you can jump on.
+
+    Once on the branches, face the half pipe and jump on some slim standable terrain then jump out and onto the half pipe.`,
+    difficulty: Difficulty.EASY
+  },
+  ruinedShrineUpperMinItems: {
+    name: 'Ruined Shrine Upper Level Min items',
+    description: `You can climb up ruined shrine with nothing. This trick enables getting the upper item if you have morph ball or towards tower of light if you have wave beam.`,
     difficulty: Difficulty.EASY
   },
   shoreTunnelEscapeWithoutSpaceJump: {
