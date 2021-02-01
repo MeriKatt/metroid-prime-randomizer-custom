@@ -36,7 +36,7 @@ export function tallonOverworld(): RegionObject[] {
         [PrimeLocation.ALCOVE]: () => true
       },
       exits: {
-        'Landing Site': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => settings.tricks.alcoveNoItems || items.has(PrimeItem.SPACE_JUMP_BOOTS)
+        'Landing Site': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => settings.tricks.alcoveNoItems || items.has(PrimeItem.SPACE_JUMP_BOOTS) || items.has(PrimeItem.MORPH_BALL) && items.canLayBombs()
       }
     },
     {
@@ -112,7 +112,11 @@ export function tallonOverworld(): RegionObject[] {
         [PrimeLocation.OVERGROWN_CAVERN]: (items: PrimeItemCollection) => items.has(PrimeItem.MORPH_BALL)
       },
       exits: {
-        'Frigate Crash Site': (items: PrimeItemCollection) => items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM),
+        'Frigate Crash Site': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
+          const PointNoReturn =  items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM) && (settings.pointOfNoReturnItems == PointOfNoReturnItems.ALLOW_ALL);
+          const NormalReqs = items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM) && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          return PointNoReturn || NormalReqs;
+        },
         [Elevator.TALLON_EAST]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const baseReqs = items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM);
           const sjReqs = (items.has(PrimeItem.SPACE_JUMP_BOOTS) || settings.tricks.tallonTransportTunnelCMinimumReqs);
@@ -160,22 +164,23 @@ export function tallonOverworld(): RegionObject[] {
       locations: {
         [PrimeLocation.HYDRO_ACCESS_TUNNEL]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           return (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
-            || ((settings.tricks.gravitylessFrigateNsj ||settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost());
+            || ((settings.tricks.gravitylessFrigateNsj ||settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost() && !items.has(PrimeItem.GRAVITY_SUIT));
         }
       },
       exits: {
         'Great Tree Hall (Lower)': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const gravityReqs = (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
-            || ((settings.tricks.gravitylessFrigateNsj || settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity) && items.canBoost());
+            || ((settings.tricks.gravitylessFrigateNsj || settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity) && items.canBoost() && !items.has(PrimeItem.GRAVITY_SUIT));
 
           return gravityReqs && items.has(PrimeItem.ICE_BEAM);
         },
         'Biohazard Containment': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const gravityReqs = (items.canLayBombs() && items.has(PrimeItem.GRAVITY_SUIT))
-            || ((settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost());
+            || ((settings.tricks.gravitylessFrigate || settings.tricks.hydroAccessTunnelWithoutGravity || settings.tricks.removeGravityReqs) && items.canBoost() && !items.has(PrimeItem.GRAVITY_SUIT));
           const SJReqs = gravityReqs && items.has(PrimeItem.SPACE_JUMP_BOOTS);
           const NSJReqs = settings.tricks.gravitylessFrigateNsj && items.canBoost();
-          return NSJReqs || SJReqs;
+          const PnR = (settings.pointOfNoReturnItems == PointOfNoReturnItems.ALLOW_ALL) || items.has(PrimeItem.WAVE_BEAM) && (items.has(PrimeItem.THERMAL_VISOR) || settings.tricks.removeThermalReqs);
+          return (NSJReqs || SJReqs) && PnR;
         }
       }
     },

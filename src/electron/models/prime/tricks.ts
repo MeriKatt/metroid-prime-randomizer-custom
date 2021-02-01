@@ -49,7 +49,7 @@ export class Tricks extends SettingsFlags {
   crossTwinFiresTunnelWithoutSpider = false;
   fieryShoresAccessWithoutMorphGrapple = false;
   fieryShoresItemSj = false;
-  fiertShoresItemMin = false;
+  fieryShoresItemMin = false;
   lateMagmoorNoHeatProtection = false;
   lavaLakeItemOnlyMissiles = false;
   lavaLakeItemSuitless = false;

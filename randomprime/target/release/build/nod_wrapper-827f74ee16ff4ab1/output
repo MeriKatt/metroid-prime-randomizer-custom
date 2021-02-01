@@ -1,0 +1,139 @@
+TARGET = Some("x86_64-pc-windows-msvc")
+OPT_LEVEL = Some("3")
+HOST = Some("x86_64-pc-windows-msvc")
+CXX_x86_64-pc-windows-msvc = None
+CXX_x86_64_pc_windows_msvc = None
+HOST_CXX = None
+CXX = None
+CXXFLAGS_x86_64-pc-windows-msvc = None
+CXXFLAGS_x86_64_pc_windows_msvc = None
+HOST_CXXFLAGS = None
+CXXFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+DEBUG = Some("false")
+CXX_x86_64-pc-windows-msvc = None
+CXX_x86_64_pc_windows_msvc = None
+HOST_CXX = None
+CXX = None
+CXXFLAGS_x86_64-pc-windows-msvc = None
+CXXFLAGS_x86_64_pc_windows_msvc = None
+HOST_CXXFLAGS = None
+CXXFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2")
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/aes.o" "-c" "nod/lib/aes.cpp"
+aes.cpp
+nod/lib/aes.cpp(444): warning C4324: 'nod::NiAES': structure was padded due to alignment specifier
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DirectoryEnumerator.o" "-c" "nod/lib/DirectoryEnumerator.cpp"
+DirectoryEnumerator.cpp
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscBase.o" "-c" "nod/lib/DiscBase.cpp"
+DiscBase.cpp
+nod/include/nod/DiscBase.hpp(331): warning C4100: 'ctx': unreferenced formal parameter
+nod/include/nod/DiscBase.hpp(331): warning C4100: 'path': unreferenced formal parameter
+nod/include/nod/DiscBase.hpp(351): warning C4245: 'return': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscBase.cpp(720): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscBase.cpp(773): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscBase.cpp(777): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscBase.cpp(797): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscBase.cpp(845): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\lib\discbase.cpp(22) : warning C4706: assignment within conditional expression
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscGCN.o" "-c" "nod/lib/DiscGCN.cpp"
+DiscGCN.cpp
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'ctx': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'path': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(351): warning C4245: 'return': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(120): warning C4100: 'ctx': unreferenced formal parameter
+nod/lib/DiscGCN.cpp(120): warning C4100: 'path': unreferenced formal parameter
+nod/lib/DiscGCN.cpp(159): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(344): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(362): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(366): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(387): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(407): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscGCN.cpp(411): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscIOISO.o" "-c" "nod/lib/DiscIOISO.cpp"
+DiscIOISO.cpp
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscIOWBFS.o" "-c" "nod/lib/DiscIOWBFS.cpp"
+DiscIOWBFS.cpp
+nod/lib/DiscIOWBFS.cpp(89): warning C4815: 'tmpHead': zero-sized array in stack object will have no elements (unless the object is an aggregate that has been aggregate initialized)
+nod/lib/DiscIOWBFS.cpp(269): warning C4100: 'offset': unreferenced formal parameter
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscWii.o" "-c" "nod/lib/DiscWii.cpp"
+DiscWii.cpp
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'ctx': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'path': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(351): warning C4245: 'return': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(743): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(749): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(778): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(785): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(798): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(800): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(815): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(825): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(829): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(832): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(836): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(841): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(858): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(864): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(910): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(925): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(933): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(941): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(949): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(957): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(965): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1142): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1162): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1224): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1233): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1257): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1277): warning C4245: 'argument': conversion from 'int' to 'size_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1332): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+nod/lib/DiscWii.cpp(1341): warning C4245: 'return': conversion from 'int' to 'uint64_t', signed/unsigned mismatch
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/aes.o" "-c" "nod/lib/aes.cpp"
+aes.cpp
+nod/lib/aes.cpp(444): warning C4324: 'nod::NiAES': structure was padded due to alignment specifier
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/nod.o" "-c" "nod/lib/nod.cpp"
+nod.cpp
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'ctx': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'path': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(351): warning C4245: 'return': conversion from 'int' to 'size_t', signed/unsigned mismatch
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/sha1.o" "-c" "nod/lib/sha1.c"
+sha1.c
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/logvisor/lib/logvisor.o" "-c" "nod/logvisor/lib/logvisor.cpp"
+logvisor.cpp
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/FileIOWin32.o" "-c" "nod/lib/FileIOWin32.cpp"
+FileIOWin32.cpp
+exit code: 0
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\cl.exe" "-nologo" "-MD" "-O2" "-Brepro" "-I" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\nod_wrapper" "-I" "nod/include/" "-I" "nod/logvisor/include/" "-W4" "/std:c++17" "/EHsc" "-DUNICODE=1" "-D_UNICODE=1" "-D__SSE__=1" "-D_CRT_SECURE_NO_WARNINGS=1" "-DD_SCL_SECURE_NO_WARNINGS=1" "/IGNORE:4221" "/wd4018" "/wd4800" "/wd4005" "/wd4311" "/wd4267" "/wd4244" "/wd4200" "/wd4305" "/wd4067" "/wd4146" "-FoC:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\rust_cpp\\cpp_closures.o" "-c" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\rust_cpp\\cpp_closures.cpp"
+cpp_closures.cpp
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'ctx': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(331): warning C4100: 'path': unreferenced formal parameter
+c:\users\devta\documents\customprime\randomprime\nod_wrapper\nod\include\nod\DiscBase.hpp(351): warning C4245: 'return': conversion from 'int' to 'size_t', signed/unsigned mismatch
+exit code: 0
+AR_x86_64-pc-windows-msvc = None
+AR_x86_64_pc_windows_msvc = None
+HOST_AR = None
+AR = None
+running: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX64\\x64\\lib.exe" "-out:C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\librust_cpp_generated.a" "-nologo" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/aes.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DirectoryEnumerator.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscBase.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscGCN.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscIOISO.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscIOWBFS.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/DiscWii.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/aes.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/nod.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/sha1.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/logvisor/lib/logvisor.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\nod/lib/FileIOWin32.o" "C:\\Users\\devta\\Documents\\customprime\\randomprime\\target\\release\\build\\nod_wrapper-827f74ee16ff4ab1\\out\\rust_cpp\\cpp_closures.o"
+C:\Users\devta\Documents\customprime\randomprime\target\release\build\nod_wrapper-827f74ee16ff4ab1\out\nod\lib\aes.o : warning LNK4042: object specified more than once; extras ignored
+exit code: 0
+cargo:rustc-link-lib=static=rust_cpp_generated
+cargo:rustc-link-search=native=C:\Users\devta\Documents\customprime\randomprime\target\release\build\nod_wrapper-827f74ee16ff4ab1\out
+CXXSTDLIB_x86_64-pc-windows-msvc = None
+CXXSTDLIB_x86_64_pc_windows_msvc = None
+HOST_CXXSTDLIB = None
+CXXSTDLIB = None

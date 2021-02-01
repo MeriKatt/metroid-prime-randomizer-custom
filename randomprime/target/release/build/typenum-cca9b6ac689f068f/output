@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=C:\Users\devta\Documents\customprime\randomprime\target\release\build\typenum-cca9b6ac689f068f\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=C:\Users\devta\Documents\customprime\randomprime\target\release\build\typenum-cca9b6ac689f068f\out\op.rs

@@ -261,7 +261,11 @@ export function phendranaDrifts(): RegionObject[] {
       },
       exits: {
         'Research Core': (items: PrimeItemCollection) => items.has(PrimeItem.WAVE_BEAM),
-        'Control Tower': (items: PrimeItemCollection) => items.has(PrimeItem.SPACE_JUMP_BOOTS) && items.has(PrimeItem.WAVE_BEAM)
+        'Control Tower': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
+         const itemReqs = items.has(PrimeItem.SPACE_JUMP_BOOTS) && items.has(PrimeItem.WAVE_BEAM);
+         const PnR = items.has(PrimeItem.SCAN_VISOR) || settings.pointOfNoReturnItems == PointOfNoReturnItems.ALLOW_ALL;
+         return itemReqs && PnR;
+        }
       }
     },
     {
@@ -303,7 +307,11 @@ export function phendranaDrifts(): RegionObject[] {
 
           return items.canLayBombs() && items.has(PrimeItem.WAVE_BEAM);
         },
-        [Elevator.PHENDRANA_SOUTH]: (items: PrimeItemCollection) => items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM)
+        [Elevator.PHENDRANA_SOUTH]: (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
+          const spiderReqs = (settings.tricks.phendranaTransportSouthToTransportAccessWithoutSpider && items.has(PrimeItem.SPACE_JUMP_BOOTS)) || items.canSpider();
+          const PnR = settings.pointOfNoReturnItems == PointOfNoReturnItems.ALLOW_ALL;
+          return (spiderReqs || PnR) && items.has(PrimeItem.MORPH_BALL) && items.has(PrimeItem.ICE_BEAM);
+        }
       }
     },
     {

@@ -116,7 +116,8 @@ export function phazonMines(): RegionObject[] {
         'Elite Control': (items: PrimeItemCollection) => items.has(PrimeItem.WAVE_BEAM),
         'Ore Processing': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
           const spiderReqs = (settings.tricks.spiderlessShafts && items.canLayBombs()) || items.canSpider();
-          return spiderReqs && items.has(PrimeItem.ICE_BEAM) && items.has(PrimeItem.SPACE_JUMP_BOOTS);
+          const PnR = settings.pointOfNoReturnItems == PointOfNoReturnItems.ALLOW_ALL || items.has(PrimeItem.SCAN_VISOR);
+          return PnR && spiderReqs && items.has(PrimeItem.ICE_BEAM) && items.has(PrimeItem.SPACE_JUMP_BOOTS);
         }
       }
     },
@@ -174,7 +175,11 @@ export function phazonMines(): RegionObject[] {
         [PrimeLocation.CENTRAL_DYNAMO]: (items: PrimeItemCollection) => items.canLayBombs()
       },
       exits: {
-        'Metroid Quarantine A': (items: PrimeItemCollection) => items.canLayBombs() && items.canLayPowerBombs() && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.ICE_BEAM),
+        'Metroid Quarantine A': (items: PrimeItemCollection, settings: PrimeRandomizerSettings) => {
+         const itemReqs = items.canLayBombs() && items.canLayPowerBombs() && items.has(PrimeItem.WAVE_BEAM) && items.has(PrimeItem.ICE_BEAM);
+         const PnR = items.has(PrimeItem.SCAN_VISOR);
+         return itemReqs && PnR;
+        },
         'Ventilation Shaft': (items: PrimeItemCollection) => items.has(PrimeItem.ICE_BEAM) && items.has(PrimeItem.SPACE_JUMP_BOOTS)
       }
     },
